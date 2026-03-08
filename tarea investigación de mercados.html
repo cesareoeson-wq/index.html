@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Estratégico Bimbo 2026 - César Escobar Onofre</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --navy: #1e293b;
+            --gold: #b59410;
+            --slate: #475569;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--navy);
+        }
+
+        .serif { font-family: 'Playfair Display', serif; }
+
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .slide.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .glass-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+        }
+
+        .matrix-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 4px;
+            background-color: #cbd5e1;
+            border: 2px solid var(--navy);
+            position: relative;
+        }
+
+        .quadrant {
+            background-color: white;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .quadrant-label {
+            font-size: 10px;
+            font-weight: 800;
+            color: #94a3b8;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="max-w-6xl w-full glass-card rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row min-h-[680px]">
+        
+        <!-- Navegación Lateral Académica -->
+        <div class="w-full md:w-72 bg-slate-900 p-8 text-white flex flex-col justify-between">
+            <div>
+                <div class="mb-10 border-b border-slate-700 pb-6">
+                    <h2 class="serif text-xl text-yellow-500 mb-1">Caso de Estudio</h2>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-400">Grupo Bimbo 2026</p>
+                </div>
+                
+                <nav class="space-y-6">
+                    <div class="cursor-pointer group" onclick="goToSlide(1)">
+                        <h3 id="link-1" class="text-xs font-medium text-slate-400 group-hover:text-white transition">1. Definición del Problema</h3>
+                    </div>
+                    <div class="cursor-pointer group" onclick="goToSlide(2)">
+                        <h3 id="link-2" class="text-xs font-medium text-slate-400 group-hover:text-white transition">2. Desk Research</h3>
+                    </div>
+                    <div class="cursor-pointer group" onclick="goToSlide(3)">
+                        <h3 id="link-3" class="text-xs font-medium text-slate-400 group-hover:text-white transition">3. Benchmarking (Matriz)</h3>
+                    </div>
+                    <div class="cursor-pointer group" onclick="goToSlide(4)">
+                        <h3 id="link-4" class="text-xs font-medium text-slate-400 group-hover:text-white transition">4. Hallazgo / Insight</h3>
+                    </div>
+                    <div class="cursor-pointer group" onclick="goToSlide(5)">
+                        <h3 id="link-5" class="text-xs font-medium text-slate-400 group-hover:text-white transition">5. Propuesta de Targeting</h3>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="pt-6 border-t border-slate-800">
+                <p class="text-[9px] text-slate-500 uppercase mb-1 tracking-widest">Elaborado por:</p>
+                <p class="text-sm font-semibold serif text-white">César Escobar Onofre</p>
+            </div>
+        </div>
+
+        <!-- Contenido Principal -->
+        <div class="flex-1 bg-white p-10 relative flex flex-col">
+            
+            <!-- Slide 1: El Problema -->
+            <section id="slide-1" class="slide active">
+                <div class="mb-8">
+                    <h1 class="serif text-4xl text-slate-900">Planteamiento del Problema</h1>
+                    <div class="w-12 h-1 bg-yellow-600 mt-4"></div>
+                </div>
+                <div class="space-y-6 max-w-2xl">
+                    <p class="text-slate-600 leading-relaxed">
+                        Bimbo domina el mercado a través del <strong>Canal Detallista</strong>, pero enfrenta un conflicto de imagen. Mientras el mundo exige productos más sanos, la percepción histórica de la marca está anclada al "pan dulce" y "snacks" procesados.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        La tensión central es: <strong>¿Cómo ser percibido como una opción saludable sin perder la esencia y el sabor que los mexicanos han amado por décadas?</strong>
+                    </p>
+                    <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 mt-6">
+                        <h4 class="text-xs font-bold text-blue-800 uppercase mb-2">Punto Crítico</h4>
+                        <p class="text-sm text-blue-900">El consumidor de tiendita asocia lo "nutritivo" con algo costoso o que no satisface el hambre de la misma forma que un producto tradicional.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 2: Desk Research -->
+            <section id="slide-2" class="slide">
+                <div class="mb-8">
+                    <h1 class="serif text-4xl text-slate-900">Evidencias: Desk Research</h1>
+                    <div class="w-12 h-1 bg-yellow-600 mt-4"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-sm mb-3">Google Trends e Internet</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">Las búsquedas de <strong>"opciones bajas en azúcar"</strong> han crecido exponencialmente en México. Los consumidores investigan ingredientes antes de comprar, impulsados por las nuevas regulaciones de etiquetado.</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-sm mb-3">Redes Sociales (TikTok/Instagram)</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">Existe una tendencia de <strong>"bienestar consciente"</strong>. Los usuarios critican las marcas que no son transparentes, pero celebran aquellas que "mejoran" sus clásicos sin quitarles el sabor.</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 col-span-1 md:col-span-2">
+                        <h4 class="font-bold text-sm mb-3">Reportes de Mercado</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">Aunque Bimbo es líder, el crecimiento del segmento de <strong>pan integral y funcional</strong> es el que sostiene la rentabilidad frente al estancamiento del pan blanco tradicional.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Matriz -->
+            <section id="slide-3" class="slide">
+                <div class="mb-6">
+                    <h1 class="serif text-4xl text-slate-900">Benchmarking de Mercado</h1>
+                    <p class="text-slate-500 text-sm mt-2 italic">Comparativa de percepción: Precio vs. Beneficio de Salud</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="flex-1">
+                        <div class="matrix-container h-64 rounded-lg overflow-hidden">
+                            <div class="quadrant border-r border-b">
+                                <span class="quadrant-label mb-2">Nicho / Saludable</span>
+                                <div class="bg-slate-200 text-[9px] px-2 py-1 rounded">Marcas Orgánicas</div>
+                            </div>
+                            <div class="quadrant border-b bg-yellow-50">
+                                <span class="quadrant-label mb-2 text-yellow-700">Espacio de Oportunidad</span>
+                                <div class="bg-yellow-600 text-white text-[9px] px-2 py-1 rounded font-bold">META BIMBO 2026</div>
+                            </div>
+                            <div class="quadrant border-r">
+                                <span class="quadrant-label mb-2">Repostería Artesanal</span>
+                                <div class="bg-slate-200 text-[9px] px-2 py-1 rounded">Pastelerías Finas</div>
+                            </div>
+                            <div class="quadrant">
+                                <span class="quadrant-label mb-2">Tradicional / Masivo</span>
+                                <div class="bg-slate-900 text-white text-[9px] px-2 py-1 rounded">Bimbo Clásico</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between mt-2 text-[10px] font-bold text-slate-400">
+                            <span>PRECIO ALTO</span>
+                            <span>PRECIO BAJO (ACCESIBLE)</span>
+                        </div>
+                    </div>
+                    <div class="md:w-64">
+                        <h4 class="font-bold text-sm mb-2 underline italic">¿Qué nos dice el mapa?</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Actualmente, lo <strong>saludable</strong> se percibe como algo <strong>caro</strong> (cuadrante superior izquierdo). 
+                            <br><br>
+                            El objetivo estratégico de Bimbo es ocupar el <strong>cuadrante superior derecho</strong>: ofrecer nutrición real pero a un precio que el cliente de la tiendita pueda pagar.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: El Insight -->
+            <section id="slide-4" class="slide">
+                <div class="h-full flex flex-col justify-center items-center text-center space-y-8 py-8">
+                    <h2 class="serif text-4xl text-slate-800 italic">"El Insight: La Verdad Oculta"</h2>
+                    <div class="max-w-xl">
+                        <div class="text-3xl font-light text-slate-600 leading-tight">
+                            "La gente quiere cuidar su salud para estar bien en el futuro, pero no está dispuesta a sacrificar el <strong>sabor que le recuerda a su infancia</strong>."
+                        </div>
+                        <div class="w-16 h-0.5 bg-yellow-600 mx-auto mt-8"></div>
+                        <p class="text-slate-500 text-sm mt-6 leading-relaxed">
+                            No buscan un producto totalmente diferente, buscan su <strong>snack favorito de siempre</strong>, pero con la tranquilidad mental de que no les hace daño.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Targeting + Conclusión -->
+            <section id="slide-5" class="slide">
+                <div class="mb-8">
+                    <h1 class="serif text-4xl text-slate-900">Propuesta de Targeting</h1>
+                    <div class="w-12 h-1 bg-yellow-600 mt-4"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900 mb-1">Segmento Objetivo:</h4>
+                            <p class="text-xs text-slate-600"><strong>Padres de familia trabajadores</strong> que compran en tienditas. Buscan nutrición práctica para sus hijos con presupuesto limitado.</p>
+                        </div>
+                        <div class="p-4 bg-slate-900 text-white rounded-xl">
+                            <h4 class="font-bold text-yellow-500 text-xs uppercase mb-1">Estrategia</h4>
+                            <p class="text-xs font-light italic leading-relaxed">Lanzar clásicos con harinas integrales y endulzantes naturales, manteniendo el empaque icónico para conservar la conexión emocional.</p>
+                        </div>
+                    </div>
+                    <div class="border border-slate-200 p-4 rounded-xl">
+                        <h4 class="font-bold text-sm mb-2">Ventajas:</h4>
+                        <ul class="space-y-2 text-[11px] text-slate-700">
+                            <li class="flex items-center"><span class="w-1 h-1 bg-green-500 rounded-full mr-2"></span> Usa la distribución masiva existente.</li>
+                            <li class="flex items-center"><span class="w-1 h-1 bg-green-500 rounded-full mr-2"></span> Elimina la barrera del precio premium.</li>
+                            <li class="flex items-center"><span class="w-1 h-1 bg-green-500 rounded-full mr-2"></span> Se alinea con el Desk Research.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Conclusión solicitada -->
+                <div class="bg-yellow-50 p-5 rounded-xl border border-yellow-200">
+                    <h4 class="font-bold text-sm text-yellow-800 mb-1">Conclusión</h4>
+                    <p class="text-sm text-yellow-900 italic leading-relaxed">
+                        Bimbo tiene la oportunidad única de democratizar la salud en México, utilizando su red logística para que comer bien no sea un privilegio, sino una opción accesible y familiar para todos.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Navegación -->
+            <div class="absolute bottom-8 right-10 flex gap-4 items-center">
+                <button id="prevBtn" onclick="prevSlide()" class="px-5 py-2 border border-slate-300 rounded-full text-slate-600 text-xs font-bold hover:bg-slate-50 disabled:opacity-20 transition-all">Anterior</button>
+                <button id="nextBtn" onclick="nextSlide()" class="px-8 py-2 bg-slate-900 text-white rounded-full text-xs font-bold hover:bg-slate-800 transition-all shadow-md">Siguiente</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let current = 1;
+        const total = 5;
+
+        function updateUI() {
+            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+            document.getElementById(`slide-${current}`).classList.add('active');
+
+            for(let i=1; i<=total; i++) {
+                const link = document.getElementById(`link-${i}`);
+                if (i === current) {
+                    link.classList.add('text-white', 'font-bold');
+                    link.classList.remove('text-slate-400');
+                } else {
+                    link.classList.remove('text-white', 'font-bold');
+                    link.classList.add('text-slate-400');
+                }
+            }
+
+            document.getElementById('prevBtn').disabled = current === 1;
+            document.getElementById('nextBtn').innerText = current === total ? 'Volver al inicio' : 'Siguiente';
+        }
+
+        function nextSlide() {
+            if (current < total) {
+                current++;
+            } else {
+                current = 1;
+            }
+            updateUI();
+        }
+
+        function prevSlide() {
+            if (current > 1) {
+                current--;
+                updateUI();
+            }
+        }
+
+        function goToSlide(n) {
+            current = n;
+            updateUI();
+        }
+
+        updateUI();
+    </script>
+</body>
+</html>
